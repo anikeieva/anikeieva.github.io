@@ -1,0 +1,44 @@
+@import "base"
+
+.main-header
+  background-image: url('../img/header.jpeg')
+  background-size: cover
+  background-position: center
+  min-height: 100vh
+  align-content: center
+  text-align: center
+  #menu
+    position: fixed
+    width: 100%
+    min-height: 8vh
+    background-color: rgba(56, 67, 62, .5)
+    .lang
+      a
+        font-size: 24px
+        margin-right: 20px
+  .header-container
+    padding: 0 30px
+  .header-content
+    max-width: 1000px
+    margin: 0 auto
+    text-align: center
+    grid-template-columns: repeat(3, 1fr)
+    .circle-foto
+      grid-column: 1/2
+      border-radius: 50%
+      background-image: url('../img/selfy.jpg')
+      background-size: cover
+      background-position: top
+      min-height: 40vh
+      width: 340px
+    .header-caption
+      grid-column: 2/4
+      padding-left: 40px
+      text-align: left
+      align-content: center
+      p
+        font-size: 50px
+        font-weight: 600
+        -webkit-text-stroke-width: 1px
+        -webkit-text-stroke-color: black
+    .side-header-links
