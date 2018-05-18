@@ -1,0 +1,163 @@
+@media only screen and (max-height : 400px)
+  .header
+    .header__line-side
+      position: absolute
+      top: 30px
+@media only screen and (max-width : 1000px)
+  .header
+    .header__line-side
+    .header__main-content
+      .container
+        .circle-foto
+          .header__caption-container
+            width: 260px
+            height: 260px
+        .header__caption
+          padding-left: 40px
+@media only screen and (max-width : 900px)
+  .header
+    .header__line-side
+      .sosials .sosials__item i
+        font-size: 26px
+      .sosials-lang__link
+        font-size: 18px
+    .header__main-content
+      .container
+        .circle-foto
+          .header__caption-container
+            width: 240px
+            height: 240px
+        .header__caption
+          .header__caption-foto-container
+            .editor-container
+              min-width: 296px
+              font-size: 18px
+  .button
+    font-size: 19px
+@media only screen and (max-width : 800px)
+  .section__container
+    padding-left: 30px
+
+  .header
+    .header__line-side
+      .sosials .sosials__item i
+      .sosials-lang__link
+    .header__main-content
+      .container
+        .circle-foto
+          .header__caption-container
+            width: 200px
+            height: 200px
+            margin-bottom: 20px
+        .header__caption
+          .header__caption-foto-container
+            .editor-container
+@media only screen and (max-width : 700px)
+  .section__container
+    padding: 40px 110px 40px 90px
+    height: auto
+
+  .header
+    height: auto
+    .header__line-side
+      height: auto
+    .header__main-content
+      height: auto
+      width: 100%
+      .container
+        grid-template-rows: 2
+        max-height: fit-content
+        .circle-foto
+          height: auto
+          min-height: auto
+          max-height: auto
+          margin-bottom: 30px
+          .header__caption-container
+            margin: auto
+            margin-bottom: 20px
+        .header__caption
+          grid-row: 2
+          padding: 0
+@media only screen and (max-width : 500px)
+  .section__container
+    padding: 84px 20px 20px 50px
+
+  .header
+    .menu-container
+      .menu-container__side-bar
+        left: -50%
+        // left: 0
+        width: 50%
+        .menu-container__toggle-btn
+          left: calc(100% + 15px)
+          top: 80px
+          i
+            font-size: 40px
+    .header__line-side
+      position: absolute
+      right: auto
+      left: calc(50% - 120px)
+      top: 20px
+      align-content: flex-start
+      .sosials
+        .sosials__item
+          display: inline-block
+          margin-bottom: 0
+          margin-right: 10px
+          &:last-child
+            margin-right: 0
+          i
+            font-size: 22px
+            width: 44px
+            height: 44px
+        .sosials-lang__item
+          &:nth-child(1)
+            margin-right: 0
+          &:nth-child(2)
+            margin-bottom: 0
+            margin-right: 30px
+          .sosials-lang__link
+            font-size: 16px
+            width: 44px
+            height: 44px
+    .header__main-content
+      .container
+        .circle-foto
+          .header__caption-container
+        .header__caption
+@media only screen and (max-width : 410px)
+  .header
+    .header__main-content
+      .container
+        .circle-foto
+          .header__caption-container
+        .header__caption
+          .header__caption-foto-container .editor-container
+            font-size: 16px
+            min-width: 260px
+            padding: 15px
+@media only screen and (max-width : 380px)
+  .header
+    .header__line-side
+      .sosials
+        .sosials__item
+          margin-right: 5px
+          i
+            font-size: 20px
+            width: 40px
+            height: 40px
+        .sosials-lang__item
+          .sosials-lang__link
+            font-size: 14px
+            width: 40px
+            height: 40px
+    .header__main-content
+      .container
+        .circle-foto
+          .header__caption-container
+        .header__caption
+          .header__caption-foto-container .editor-container
+            min-width: 250px
+            padding: 5px
+  .button
+    font-size: 17px

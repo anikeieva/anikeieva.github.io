@@ -2,26 +2,181 @@
 <html lang="en">
 <head>
 	<meta name="viewport" content="width = device-width, initial-scale = 1, maximum-scale = 1"  charset="utf-8">
-	<title>Web Developer</title>
+	<title>Anikeiva - site portfolio</title>
 	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-  <header class="main-header grid">
-		<div id="menu">
-			<div class="lang">
-				<a href="ua.html">UK</a>
-				<a href="#">EN</a>
+
+	<div class="main-container">
+
+	  <header class="header section">
+
+			<div class="menu-container__side-bar">
+				<div class="menu-container__toggle-btn">
+					<i class="fa fa-bars menu-container__icon" aria-hidden="true"></i>
+				</div>
+				<ul class="menu grid">
+					<li class="menu__item grid">
+						<a href="#go-to-portfolio" class="menu__link">Portfolio</a>
+					</li>
+					<li class="menu__item grid">
+						<a href="#go-to-about-me" class="menu__link">About me</a>
+					</li>
+					<li class="menu__item grid">
+						<a href="#go-to-skills" class="menu__link">My skills</a>
+					</li>
+					<li class="menu__item grid">
+						<a href="#go-to-contact-me" class="menu__link">Contact me</a>
+					</li>
+				</ul>
 			</div>
+
+			<div class="header__container container">
+
+				<div class="header__main-content section__main-content grid">
+					<div class="header__main-content-container container grid">
+
+					<div class="circle-foto grid">
+						<div class="header__caption-container"></div>
+						<a href="#go-to-portfolio" class="button header__button">View my portfolio</a>
+					</div>
+					<div class="header__caption grid">
+						<div class="header__caption-foto-container">
+
+							<div class="header__caption-container editor-container">
+								<p class="editor-container__text">
+									{ <br>
+									&nbsp; "<span class="editor-container__text-main">basics</span>": { <br>
+									&nbsp; &nbsp; "name": "Alyona Anikeiva", <br>
+									&nbsp; &nbsp; "location": { <br>
+									&nbsp; &nbsp; &nbsp; "city": "Kyiv", <br>
+									&nbsp; &nbsp; &nbsp; "country": "Ukraine" <br>
+									&nbsp; &nbsp; } <br>
+									&nbsp; }, <br>
+									&nbsp; "<span class="editor-container__text-main">skills</span>": { <br>
+									&nbsp; &nbsp; "name": "Front-End Developer", <br>
+									&nbsp; &nbsp; "level": "Junior" <br>
+									&nbsp; &nbsp; "keywords":  [ <br>
+									&nbsp; &nbsp; &nbsp; "JavaScript", <br>
+									&nbsp; &nbsp; &nbsp; "HTML5", <br>
+									&nbsp; &nbsp; &nbsp; "CSS3" <br>
+									&nbsp; &nbsp; ] <br>
+									&nbsp; } <br>
+									}
+								</p>
+							</div>
+						</div>
+
+					</div>
+
+					</div>
+				</div>
+
+				<div class="header__line-side grid">
+					<div class="header__line-side-container container">
+
+						<ul class="sosials sosials-lang">
+							<li class="sosials__item sosials-lang__item">
+								<a href="ua/index.html" class="sosials-lang__link sosials-lang__link-ua middle text-center">UK</a>
+							</li>
+							<li class="sosials__item sosials-lang__item">
+								<a href="#" class="sosials-lang__link sosials-lang__link-en middle text-center active">EN</a>
+							</li>
+							<li class="sosials__item">
+								<a href="https://github.com/anikeieva" class="sosials__link" target="_blank">
+									<i class="fa fa-github" aria-hidden="true"></i>
+								</a>
+							</li>
+							<li class="sosials__item">
+								<a href="https://www.linkedin.com/in/anikeieva/" class="sosials__link" target="_blank">
+									<i class="fa fa-linkedin" aria-hidden="true"></i>
+								</a>
+							</li>
+							<li class="sosials__item">
+								<a href="https://www.facebook.com/alyonaanikeeva" class="sosials__link" target="_blank">
+									<i class="fa fa-facebook" aria-hidden="true"></i>
+								</a>
+							</li>
+						</ul>
+
+					</div>
+				</div>
+
+			</div>
+	  </header>
+
+		<div class="section section_light experience-section">
+
+			<div class="section__container container grid">
+
+				<div class="section__caption-container">
+					<h2 class="section__caption">My experience</h2>
+				</div>
+
+				<div  class="section__main-content experience-section__main-content grid">
+
+					<div class="experience-section__item">
+						<figure>
+							<a class="experience-section__link">
+								<span class="experience-section__icon desktop-icon"></span>
+							</a>
+							<figcaption class="experience-section__caption">freelance</figcaption>
+						</figure>
+						<p class="experience-section__text">I create websites on order</p>
+					</div>
+
+					<div class="experience-section__item">
+						<figure>
+							<a class="experience-section__link">
+								<span class="experience-section__icon users-icon"></span>
+							</a>
+							<figcaption class="experience-section__caption">lecture and mentor</figcaption>
+						</figure>
+						<p class="experience-section__text">
+							After finishing JS Development courses I worked a mentor
+							of JavaScript courses. And I was a lecturer of HTML&amp;CSS courses
+							for sixth graders
+						</p>
+					</div>
+
+					<div class="experience-section__item">
+						<figure>
+							<a href="#go-to-portfolio" class="experience-section__link">
+								<span class="experience-section__icon code-icon"></span>
+							</a>
+							<figcaption class="experience-section__caption">own websites</figcaption>
+						</figure>
+						<p class="experience-section__text">I create websites with my own design</p>
+					</div>
+
+				</div>
+			</div>
+
 		</div>
-		<div class="header-container grid">
-	    <div class="header-content grid">
-	      <div class="circle-foto"></div>
-	      <div class="header-caption grid">
-	        <p><span>Hello!</span><br>I'm Alyona - Junior Frontend Developer</p>
-	      </div>
-	    </div>
-		</div>
-		<div class="side-header-links"></div>
-  </header>
+
+		<div class="section section_light portfolio-section">
+			<a href="#" name="go-to-portfolio"></a>
+
+			<div class="section__container container grid">
+
+				<div class="section__caption-container">
+					<h2 class="section__caption">My portfolio</h2>
+				</div>
+
+				<div  class="section__main-content portfolio__main-content grid">
+					<a href="#" class="portfolio__item">
+						<img src="img/screen/healthy_food_site/healthy_food_screens.png" class="portfolio__item-img">
+					</a>
+				</div>
+
+		 </div>
+
+	 </div>
+
+	<div>
+
+	<script src="js/sideBarMenu.js"></script>
+
 </body>
 </html>

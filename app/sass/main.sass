@@ -1,44 +1,287 @@
-@import "base"
+@import 'base'
+@import 'fonts'
 
-.main-header
+$dark-background: rgba(56, 67, 62, .7)
+$dark-background-09-opacity: rgba(56, 67, 62, .9)
+$dark-background-menu: rgba(28, 23, 26, 1)
+$light-background: #eaeae5
+$bright-background: #e2b89b
+$bright-color: #d05d42
+$brown-light: #decdc2
+$green-dark: rgba(90, 111, 94, 1)
+$green-04-opacity: rgba(54, 72, 64, 0.4)
+$green-light: #a4c376
+$white-with-09-opacity: rgba(255, 255, 255, .9)
+$white-with-05-opacity: rgba(255, 255, 255, .5)
+$facebook-background: rgba(66, 103, 178, .7)
+$linkedin-background: rgba(0, 115, 177, .7)
+$github-background: rgba(36, 41, 46, .7)
+
+.main-container
+  position: absolute
+  top: 0
+  left: 0
+  &.main-container_left
+    left: 349px
+
+.header
   background-image: url('../img/header.jpeg')
   background-size: cover
   background-position: center
-  min-height: 100vh
-  align-content: center
-  text-align: center
-  #menu
+  height: 100vh
+  min-height: 600px
+  .menu-container__side-bar
+    z-index: 4
     position: fixed
-    width: 100%
-    min-height: 8vh
-    background-color: rgba(56, 67, 62, .5)
-    .lang
-      a
-        font-size: 24px
-        margin-right: 20px
-  .header-container
-    padding: 0 30px
-  .header-content
-    max-width: 1000px
-    margin: 0 auto
-    text-align: center
-    grid-template-columns: repeat(3, 1fr)
-    .circle-foto
-      grid-column: 1/2
-      border-radius: 50%
-      background-image: url('../img/selfy.jpg')
-      background-size: cover
-      background-position: top
-      min-height: 40vh
-      width: 340px
-    .header-caption
-      grid-column: 2/4
-      padding-left: 40px
-      text-align: left
+    top: 0
+    right: auto
+    bottom: auto
+    left: -350px
+    width: 350px
+    height: 100vh
+    min-height: 600px
+    background-color: $bright-color
+    transition: left .4s ease
+    &.active
+      left: 0
+    .menu-container__toggle-btn
+      position: absolute
+      left: calc(100% + 30px)
+      top: 20px
+      cursor: pointer
+      i
+        font-size: 44px
+        color: white
+        &.fa-times
+          font-size: 45px
+          transition: transform .5s ease
+          &:hover
+            transform: rotate(90deg) rotateX(0)
+    .menu
+      padding: 30px 50px
+      text-align: center
+      .menu__item
+        padding: 30px 20px
+        font-size: 23px
+        border-bottom: 1px solid $white-with-05-opacity
+        .menu__link
+          transition: color .5s ease
+          &:hover
+            color: $brown-light
+  .header__container
+    padding: 30px 130px 30px 70px
+    height: 100vh
+    min-height: 600px
+    .header__main-content
+      float: left
+      width: calc(100% - 60px)
+      height: calc(100vh - 60px)
+      min-height: 560px
       align-content: center
-      p
-        font-size: 50px
+      .container
+        width: initial
+        margin: 0 auto
+        align-content: center
+        grid-template-rows: 1
+        max-height: 560px
+        .circle-foto
+          grid-row: 1
+          height: calc(100vh - 60px)
+          max-height: 560px
+          min-height: 560px
+          align-content: center
+          .header__caption-container
+            width: 280px
+            height: 280px
+            border-radius: 50%
+            background-image: url('../img/selfy-foto.jpg')
+            background-size: cover
+            background-position: center
+            margin-bottom: 40px
+        .header__caption
+          grid-row: 1
+          align-content: center
+          width: initial
+          max-width: 700px
+          text-align: left
+          padding-left: 80px
+          .header__caption-foto-container
+            position: relative
+            .editor-container
+              background-color: $green-04-opacity
+              padding: 20px
+              border-radius: 10px
+              font-size: 22px
+              font-weight: 500
+              color: white
+              line-height: 1
+              .editor-container__text-main
+                color: $green-light
+                font-weight: 600
+.header__line-side
+    position: fixed
+    top: calc(50vh - 170px)
+    right: 30px
+    // left: calc(25% + 30px)
+    align-content: center
+    &.header__line-side_left
+      left: 380px
+    .sosials
+      font-size: 0
+      .sosials__item
+        width: fit-content
+        list-style: none
+        margin-bottom: 15px
+        &:last-child
+          margin-bottom: 0
+        .sosials__link
+          display: block
+          i
+            color: white
+            font-size: 30px
+            width: 50px
+            height: 50px
+            background-color: $dark-background
+            text-align: center
+            display: table-cell
+            vertical-align: middle
+            transition: background-color .5s ease
+            &.fa-github:hover
+              background-color: $github-background
+            &.fa-linkedin:hover
+              background-color: $linkedin-background
+            &.fa-facebook:hover
+              background-color: $facebook-background
+    .sosials-lang
+      &__item
+      &__item:first-child
+        margin-bottom: 0
+      &__item:nth-child(2)
+        margin-bottom: 60px
+      &__link
+        width: 50px
+        height: 50px
+        background-color: $dark-background
+        font-size: 22px
         font-weight: 600
-        -webkit-text-stroke-width: 1px
-        -webkit-text-stroke-color: black
-    .side-header-links
+        transition: background-color .5s ease
+        &:hover
+          background-color: $dark-background-09-opacity
+        &.active
+          background-color: $white-with-09-opacity
+          color: $green-dark
+          &:hover
+            color: $green-light
+
+.button
+  background-color: $white-with-09-opacity
+  color: $green-dark
+  display: block
+  border: 2px solid $white-with-09-opacity
+  padding: 8px
+  text-align: center
+  font-size: 22px
+  font-weight: 600
+  &:hover
+    color: $green-light
+
+.section_light
+  background-color: $light-background
+
+.section
+  .section__container
+    padding: 90px 130px 90px 70px
+    align-content: center
+    .section__caption-container
+      padding: 10px 45px
+      width: fit-content
+      margin: 0 auto 100px auto
+      background-color: white
+      color: $bright-color
+      .section__caption
+        font-family: monospace
+        font-size: 20px
+        font-weight: 300
+
+.experience-section__main-content
+  grid-template-columns: repeat(3, 1fr)
+  text-align: center
+  color: $dark-background-09-opacity
+  .experience-section__item
+    padding: 0 20px
+    .experience-section__link
+      color: $dark-background-09-opacity
+      .experience-section__icon
+        font-size: 60px
+        font-family: 'FontAwesome'
+        width: 150px
+        height: 150px
+        border: 3px solid $dark-background-09-opacity
+        border-radius: 75px
+        display: table-cell
+        vertical-align: middle
+        &.desktop-icon::before
+          content: '\f108'
+        &.users-icon::before
+          content: '\f0c0'
+        &.code-icon::before
+          content: '\f121'
+        &:hover
+          background-color: $bright-color
+          background-color: $dark-background-09-opacity
+          color: white
+          border-color: $dark-background-09-opacity
+        &.users-icon:hover::before
+          display: grid
+          font-family: monospace
+          content: 'View galery'
+          padding: 0 10px
+          font-size: 19px
+          line-height: 1.5
+          color: white
+          align-content: center
+          text-align: center
+        &.users-icon:hover
+          background-image: url(../img/about_me/gallery.svg)
+          background-size: cover
+          background-position: center
+          background-repeat: no-repeat
+        &.code-icon:hover::before
+          display: grid
+          font-family: monospace
+          content: 'View portfolio'
+          padding: 0 10px
+          font-size: 19px
+          line-height: 1.5
+          color: white
+          align-content: center
+          text-align: center
+        &.code-icon:hover
+          background-image: url(../img/about_me/coding.svg)
+          background-size: cover
+          background-position: center
+          background-repeat: no-repeat
+    .experience-section__caption
+      margin-top: 20px
+      margin-bottom: 10px
+      color: $bright-color
+      font-size: 22px
+      font-family: sans-serif
+      font-family: 'ArchitectsDaughter-Regular'
+      font-weight: 600
+    .experience-section__text
+      font-family: 'ArchitectsDaughter-Regular'
+      font-family: monospace
+      font-size: 14px
+
+.portfolio-section
+  background-color: $bright-background
+  .portfolio__main-content
+    width: fit-content
+    .portfolio__item
+      width: 70%
+      margin: 0 auto
+      &-img
+        width: 100%
+
+@import 'media'

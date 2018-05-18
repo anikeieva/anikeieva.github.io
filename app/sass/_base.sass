@@ -1,4 +1,3 @@
-
 *
   box-sizing: border-box
   &:before, &:after
@@ -18,20 +17,38 @@ body
   position: relative
   margin: 0
   padding: 0
-  background-color: white
   color: white
 
-.text-center
-  text-align: center
+html
+  scroll-behavior: smooth
 
 .grid
   display: grid
 
-section, header, footer
+.header, .main-container
   position: relative
 
-h1, h2
+.header, .container, .section__main-content, .header__line-up,
+.main-container, .section, body, .portfolio__item
+  width: 100%
+
+.header::after, .container::after,.section__main-content::after,
+.header__line-up::after, .main-container::after, .section::after,
+body::after, .portfolio__item::after
+  display: block
+  content: ''
+  clear: both
+
+.text-center
+  text-align: center
+
+.middle
+  display: table-cell
+  vertical-align: middle
+
+h1, h2, .sosials, p, .menu, figure
   margin: 0
+  padding: 0
 
 a
   text-decoration: none
