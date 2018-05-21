@@ -1,6 +1,7 @@
 @import 'base'
 @import 'fonts'
 
+$dark-background-08-opacity: rgba(56, 67, 62, .78)
 $dark-background: rgba(56, 67, 62, .7)
 $dark-background-09-opacity: rgba(56, 67, 62, .9)
 $dark-background-menu: rgba(28, 23, 26, 1)
@@ -9,13 +10,14 @@ $bright-background: #e2b89b
 $bright-color: #d05d42
 $brown-light: #decdc2
 $green-dark: rgba(90, 111, 94, 1)
-$green-04-opacity: rgba(54, 72, 64, 0.4)
+$green-06-opacity: rgba(54, 72, 64, 0.6)
 $green-light: #a4c376
 $white-with-09-opacity: rgba(255, 255, 255, .9)
 $white-with-05-opacity: rgba(255, 255, 255, .5)
 $facebook-background: rgba(66, 103, 178, .7)
 $linkedin-background: rgba(0, 115, 177, .7)
 $github-background: rgba(36, 41, 46, .7)
+$footer-background: #1f1d1d
 
 .main-container
   position: absolute
@@ -108,7 +110,7 @@ $github-background: rgba(36, 41, 46, .7)
           .header__caption-foto-container
             position: relative
             .editor-container
-              background-color: $green-04-opacity
+              background-color: $green-06-opacity
               padding: 20px
               border-radius: 10px
               font-size: 22px
@@ -182,11 +184,20 @@ $github-background: rgba(36, 41, 46, .7)
   text-align: center
   font-size: 22px
   font-weight: 600
+  transition: color .8s ease
   &:hover
     color: $green-light
 
 .section_light
   background-color: $light-background
+  color: $dark-background-09-opacity
+
+.section_bright
+  background-color: $bright-background
+
+.limit-container
+  max-width: 1200px
+  margin: 0 auto
 
 .section
   .section__container
@@ -220,6 +231,7 @@ $github-background: rgba(36, 41, 46, .7)
         border-radius: 75px
         display: table-cell
         vertical-align: middle
+        transition: background-color 1.2s ease, color 1.2s ease, border-color 1.2s ease
         &.desktop-icon::before
           content: '\f108'
         &.users-icon::before
@@ -227,25 +239,26 @@ $github-background: rgba(36, 41, 46, .7)
         &.code-icon::before
           content: '\f121'
         &:hover
-          background-color: $bright-color
           background-color: $dark-background-09-opacity
           color: white
           border-color: $dark-background-09-opacity
         &.users-icon:hover::before
           display: grid
           font-family: monospace
-          content: 'View galery'
+          content: 'View gallery'
           padding: 0 10px
           font-size: 19px
           line-height: 1.5
           color: white
           align-content: center
           text-align: center
-        &.users-icon:hover
-          background-image: url(../img/about_me/gallery.svg)
-          background-size: cover
-          background-position: center
-          background-repeat: no-repeat
+        &.users-icon
+          transition: background-color 1.2s ease, background-image 1.2s ease, background-size 1.2s ease, background-position 1.2s ease, background-repeat 1.2s ease
+          &:hover
+            background-image: url(../img/about_me/gallery.svg)
+            background-size: cover
+            background-position: center
+            background-repeat: no-repeat
         &.code-icon:hover::before
           display: grid
           font-family: monospace
@@ -275,13 +288,61 @@ $github-background: rgba(36, 41, 46, .7)
       font-size: 14px
 
 .portfolio-section
-  background-color: $bright-background
-  .portfolio__main-content
     width: fit-content
     .portfolio__item
       width: 70%
       margin: 0 auto
       &-img
         width: 100%
+
+.about-me-section
+  .section__main-content
+    grid-template-columns: repeat(2, 1fr)
+    .about-me-section__item
+      padding: 10px 40px
+      .about-me-section__img
+        width: 100%
+
+.skills-section
+  .skills-section__skill
+    display: block
+    width: fit-content
+    float: left
+    background-color: $dark-background-09-opacity
+    padding: 10px
+    margin: 10px
+    font-size: 18px
+    font-family: monospace
+    transition: background-color .9s ease
+    &:hover
+      background-color: $dark-background-08-opacity
+
+.gallery-section
+  .section__main-content
+    position: relative
+    grid-template-columns: 1fr
+    .gallery-section__angle-button
+      position: absolute
+      top: 50%
+      transform: translateY(-50%)
+      color: white
+      font-size: 65px
+      cursor: pointer
+      &-left
+        left: 30px
+      &-right
+        right: 30px
+    .gallery-section__item
+      width: 100%
+      height: 60vh
+      background-image: url('../img/gallery/it-школяр/30171219_169344820445798_4335574628847642808_o.jpg')
+      background-size: cover
+      background-position: center
+      background-repeat: no-repeat
+
+.footer
+  background-color: $footer-background
+  text-align: center
+  font-family: monospace
 
 @import 'media'
