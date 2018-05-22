@@ -8,6 +8,7 @@ $dark-background-menu: rgba(28, 23, 26, 1)
 $light-background: #eaeae5
 $bright-background: #e2b89b
 $bright-color: #d05d42
+$bright-color-opacity: rgba(208, 93, 66, 0.76)
 $brown-light: #decdc2
 $green-dark: rgba(90, 111, 94, 1)
 $green-06-opacity: rgba(54, 72, 64, 0.6)
@@ -18,13 +19,6 @@ $facebook-background: rgba(66, 103, 178, .7)
 $linkedin-background: rgba(0, 115, 177, .7)
 $github-background: rgba(36, 41, 46, .7)
 $footer-background: #1f1d1d
-
-.main-container
-  position: absolute
-  top: 0
-  left: 0
-  &.main-container_left
-    left: 349px
 
 .header
   background-image: url('../img/header.jpeg')
@@ -201,7 +195,7 @@ $footer-background: #1f1d1d
 
 .section
   .section__container
-    padding: 90px 130px 90px 70px
+    padding: 90px 130px 90px 90px
     align-content: center
     .section__caption-container
       padding: 10px 45px
@@ -289,19 +283,40 @@ $footer-background: #1f1d1d
 
 .portfolio-section
     width: fit-content
+    &.portfolio-section_hover
+      background-color: silver
     .portfolio__item
+      position: relative
       width: 70%
       margin: 0 auto
+      transition: transform 1.2s ease
+      &:hover
+        transform: translateX(20px)
       &-img
         width: 100%
+    .portfolio-section__hover-text
+      display: none
+      position: absolute
+      top: 50%
+      left: 50%
+      width: fit-content
+      height: fit-content
+      background-color: $bright-color-opacity
+      padding: 15px 30px
+      margin: 0 auto
+      &.visible
+        display: block
 
 .about-me-section
   .section__main-content
     grid-template-columns: repeat(2, 1fr)
     .about-me-section__item
-      padding: 10px 40px
+      padding: 10px 20px
       .about-me-section__img
         width: 100%
+      .about-me-section__text
+        font-family: 'ArchitectsDaughter-Regular'
+        margin-bottom: 10px
 
 .skills-section
   .skills-section__skill
