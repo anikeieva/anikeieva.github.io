@@ -26,6 +26,7 @@ $footer-background: #1f1d1d
   background-position: center
   height: 100vh
   min-height: 600px
+  max-height: 1000px
   .menu-container__side-bar
     z-index: 4
     position: fixed
@@ -36,6 +37,7 @@ $footer-background: #1f1d1d
     width: 350px
     height: 100vh
     min-height: 600px
+    max-height: 1000px
     background-color: $bright-color
     transition: left .4s ease
     &.active
@@ -48,18 +50,22 @@ $footer-background: #1f1d1d
       i
         font-size: 44px
         color: white
+        &.no-active-bars
+          -webkit-text-stroke: 2px $bright-color
         &.fa-times
           font-size: 45px
           transition: transform .5s ease
           &:hover
             transform: rotate(90deg) rotateX(0)
     .menu
-      padding: 30px 50px
+      padding: 47.5px 50px
       text-align: center
       .menu__item
         padding: 30px 20px
         font-size: 23px
         border-bottom: 1px solid $white-with-05-opacity
+        &:last-child
+          border-bottom: 0
         .menu__link
           transition: color .5s ease
           &:hover
@@ -68,6 +74,7 @@ $footer-background: #1f1d1d
     padding: 30px 130px 30px 70px
     height: 100vh
     min-height: 600px
+    max-height: 1000px
     .header__main-content
       float: left
       width: calc(100% - 60px)
@@ -166,8 +173,7 @@ $footer-background: #1f1d1d
         &.active
           background-color: $white-with-09-opacity
           color: $green-dark
-          &:hover
-            color: $green-light
+          cursor: default
 
 .button
   background-color: $white-with-09-opacity
@@ -195,8 +201,10 @@ $footer-background: #1f1d1d
 
 .section
   .section__container
-    padding: 90px 130px 90px 90px
+    padding: 90px 100px 90px 80px
     align-content: center
+    .section__main-content
+      padding: 0 0 0 20px
     .section__caption-container
       padding: 10px 45px
       width: fit-content
@@ -285,27 +293,31 @@ $footer-background: #1f1d1d
     width: fit-content
     &.portfolio-section_hover
       background-color: silver
-    .portfolio__item
-      position: relative
-      width: 70%
-      margin: 0 auto
-      transition: transform 1.2s ease
-      &:hover
-        transform: translateX(20px)
-      &-img
-        width: 100%
-    .portfolio-section__hover-text
-      display: none
-      position: absolute
-      top: 50%
-      left: 50%
-      width: fit-content
-      height: fit-content
-      background-color: $bright-color-opacity
-      padding: 15px 30px
-      margin: 0 auto
-      &.visible
-        display: block
+    .section__container
+      .section__main-content
+        padding: 0 20px
+        .portfolio__item
+          position: relative
+          width: 75%
+          margin: 0 auto
+          transition: transform 1.2s ease
+          &:hover
+            transform: translateX(20px)
+          &-img
+            width: 100%
+        .portfolio-section__hover-text
+          display: none
+          position: absolute
+          top: 50%
+          left: 50%
+          width: fit-content
+          height: fit-content
+          background-color: $bright-color-opacity
+          padding: 15px 30px
+          margin: 0 auto
+          font-size: 20px
+          &.visible
+            display: block
 
 .about-me-section
   .section__main-content
@@ -317,47 +329,65 @@ $footer-background: #1f1d1d
       .about-me-section__text
         font-family: 'ArchitectsDaughter-Regular'
         margin-bottom: 10px
+        &_ua
+          font-family: 'Kurale-Regular'
+          font-size: 17px
+          .about-me-section__text-link
+            font-size: 18px
+        &-link
+          color: $bright-color
+          font-size: 17px
 
 .skills-section
-  .skills-section__skill
-    display: block
-    width: fit-content
-    float: left
-    background-color: $dark-background-09-opacity
-    padding: 10px
-    margin: 10px
-    font-size: 18px
-    font-family: monospace
-    transition: background-color .9s ease
-    &:hover
-      background-color: $dark-background-08-opacity
+  .section__main-content
+    padding: 0 0 0 10px
+    .skills-section__skill
+      display: block
+      width: fit-content
+      float: left
+      background-color: $dark-background-09-opacity
+      padding: 10px
+      margin: 10px
+      font-size: 18px
+      font-family: monospace
+      transition: background-color .9s ease
+      &:hover
+        background-color: $dark-background-08-opacity
 
 .gallery-section
-  .section__main-content
-    position: relative
-    grid-template-columns: 1fr
-    .gallery-section__angle-button
-      position: absolute
-      top: 50%
-      transform: translateY(-50%)
-      color: white
-      font-size: 65px
-      cursor: pointer
-      &-left
-        left: 30px
-      &-right
-        right: 30px
-    .gallery-section__item
-      width: 100%
-      height: 60vh
-      background-image: url('../img/gallery/it-школяр/30171219_169344820445798_4335574628847642808_o.jpg')
-      background-size: cover
-      background-position: center
-      background-repeat: no-repeat
+  .section__container
+    .section__main-content
+      position: relative
+      grid-template-columns: 1fr
+      padding: 0 0 0 10px
+      .gallery-section__angle-button
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+        color: white
+        font-size: 65px
+        cursor: pointer
+        &-left
+          left: 30px
+        &-right
+          right: 30px
+      .gallery-section__item
+        width: 100%
+        height: 60vh
+        min-height: 400px
+        max-height: 700px
+        background-image: url('../img/gallery/it-shkolyar/1.jpg')
+        background-size: cover
+        background-position: center
+        background-repeat: no-repeat
 
 .footer
   background-color: $footer-background
   text-align: center
   font-family: monospace
+  .section__container
+    padding: 80px 20px
+    .section__main-content
+      padding: 0
 
 @import 'media'
