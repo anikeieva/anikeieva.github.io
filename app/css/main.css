@@ -374,7 +374,13 @@ a {
           font-size: 18px; }
       .about-me-section .section__main-content .about-me-section__item .about-me-section__text-link {
         color: #d05d42;
-        font-size: 17px; }
+        font-size: 17px;
+        font-weight: 600;
+        background-color: rgba(255, 255, 255, 0.3);
+        padding: 1px;
+        transition: color .6s ease; }
+        .about-me-section .section__main-content .about-me-section__item .about-me-section__text-link:hover {
+          color: rgba(56, 67, 62, 0.7); }
 
 .skills-section .section__main-content {
   padding: 0 0 0 10px; }
@@ -387,9 +393,9 @@ a {
     margin: 10px;
     font-size: 18px;
     font-family: monospace;
-    transition: background-color .9s ease; }
+    transition: background-color .6s ease; }
     .skills-section .section__main-content .skills-section__skill:hover {
-      background-color: rgba(56, 67, 62, 0.78); }
+      background-color: #38433e; }
 
 .gallery-section .section__container .section__main-content {
   position: relative;
