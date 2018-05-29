@@ -23,7 +23,8 @@ html {
   scroll-behavior: smooth; }
 
 .grid {
-  display: grid; }
+  display: grid;
+  display: -ms-grid; }
 
 .header, .main-container {
   position: relative; }
@@ -129,7 +130,6 @@ a {
         width: initial;
         margin: 0 auto;
         align-content: center;
-        grid-template-rows: 1;
         max-height: 560px; }
         .header .header__container .header__main-content .container .circle-foto {
           grid-row: 1;
@@ -248,7 +248,7 @@ a {
     padding: 0 0 0 20px; }
   .section .section__container .section__caption-container {
     padding: 10px 45px;
-    width: fit-content;
+    display: table;
     margin: 0 auto 70px auto;
     background-color: white;
     color: #d05d42; }
@@ -259,6 +259,7 @@ a {
 
 .experience-section__main-content {
   grid-template-columns: repeat(3, 1fr);
+  -ms-grid-columns: 1fr 1fr 1fr;
   text-align: center;
   color: rgba(56, 67, 62, 0.9); }
   .experience-section__main-content .experience-section__item {
@@ -275,10 +276,14 @@ a {
         display: table-cell;
         vertical-align: middle;
         transition: background-color 1.2s ease, color 1.2s ease, border-color 1.2s ease; }
+        .experience-section__main-content .experience-section__item .experience-section__link .experience-section__icon.desktop-icon {
+          -ms-grid-column: 1; }
         .experience-section__main-content .experience-section__item .experience-section__link .experience-section__icon.desktop-icon::before {
           content: '\f108'; }
         .experience-section__main-content .experience-section__item .experience-section__link .experience-section__icon.users-icon::before {
           content: '\f0c0'; }
+        .experience-section__main-content .experience-section__item .experience-section__link .experience-section__icon.code-icon {
+          -ms-grid-column: 3; }
         .experience-section__main-content .experience-section__item .experience-section__link .experience-section__icon.code-icon::before {
           content: '\f121'; }
         .experience-section__main-content .experience-section__item .experience-section__link .experience-section__icon:hover {
@@ -296,7 +301,8 @@ a {
           align-content: center;
           text-align: center; }
         .experience-section__main-content .experience-section__item .experience-section__link .experience-section__icon.users-icon {
-          transition: background-color 1.2s ease, background-image 1.2s ease, background-size 1.2s ease, background-position 1.2s ease, background-repeat 1.2s ease; }
+          transition: background-color 1.2s ease, background-image 1.2s ease, background-size 1.2s ease, background-position 1.2s ease, background-repeat 1.2s ease;
+          -ms-grid-column: 2; }
           .experience-section__main-content .experience-section__item .experience-section__link .experience-section__icon.users-icon:hover {
             background-image: url(../img/about_me/gallery.svg);
             background-size: cover;
@@ -360,9 +366,14 @@ a {
         display: block; }
 
 .about-me-section .section__main-content {
-  grid-template-columns: repeat(2, 1fr); }
+  grid-template-columns: repeat(2, 1fr);
+  -ms-grid-columns: 1fr 1fr; }
   .about-me-section .section__main-content .about-me-section__item {
     padding: 10px 20px; }
+    .about-me-section .section__main-content .about-me-section__item_img {
+      -ms-grid-column: 1; }
+    .about-me-section .section__main-content .about-me-section__item_text {
+      -ms-grid-column: 2; }
     .about-me-section .section__main-content .about-me-section__item .about-me-section__img {
       width: 100%; }
     .about-me-section .section__main-content .about-me-section__item .about-me-section__text {

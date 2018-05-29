@@ -86,7 +86,6 @@ $footer-background: #1f1d1d
         width: initial
         margin: 0 auto
         align-content: center
-        grid-template-rows: 1
         max-height: 560px
         .circle-foto
           grid-row: 1
@@ -208,7 +207,7 @@ $footer-background: #1f1d1d
       padding: 0 0 0 20px
     .section__caption-container
       padding: 10px 45px
-      width: fit-content
+      display: table
       margin: 0 auto 70px auto
       background-color: white
       color: $bright-color
@@ -219,6 +218,7 @@ $footer-background: #1f1d1d
 
 .experience-section__main-content
   grid-template-columns: repeat(3, 1fr)
+  -ms-grid-columns: 1fr 1fr 1fr
   text-align: center
   color: $dark-background-09-opacity
   .experience-section__item
@@ -235,10 +235,14 @@ $footer-background: #1f1d1d
         display: table-cell
         vertical-align: middle
         transition: background-color 1.2s ease, color 1.2s ease, border-color 1.2s ease
+        &.desktop-icon
+          -ms-grid-column: 1
         &.desktop-icon::before
           content: '\f108'
         &.users-icon::before
           content: '\f0c0'
+        &.code-icon
+          -ms-grid-column: 3
         &.code-icon::before
           content: '\f121'
         &:hover
@@ -257,6 +261,7 @@ $footer-background: #1f1d1d
           text-align: center
         &.users-icon
           transition: background-color 1.2s ease, background-image 1.2s ease, background-size 1.2s ease, background-position 1.2s ease, background-repeat 1.2s ease
+          -ms-grid-column: 2
           &:hover
             background-image: url(../img/about_me/gallery.svg)
             background-size: cover
@@ -323,8 +328,13 @@ $footer-background: #1f1d1d
 .about-me-section
   .section__main-content
     grid-template-columns: repeat(2, 1fr)
+    -ms-grid-columns: 1fr 1fr
     .about-me-section__item
       padding: 10px 20px
+      &_img
+        -ms-grid-column: 1
+      &_text
+        -ms-grid-column: 2
       .about-me-section__img
         width: 100%
       .about-me-section__text
