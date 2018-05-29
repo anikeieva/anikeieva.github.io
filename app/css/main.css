@@ -136,7 +136,8 @@ a {
           height: calc(100vh - 60px);
           max-height: 560px;
           min-height: 560px;
-          align-content: center; }
+          align-content: center;
+          -ms-grid-column: 1; }
           .header .header__container .header__main-content .container .circle-foto .header__caption-container {
             width: 280px;
             height: 280px;
@@ -144,14 +145,18 @@ a {
             background-image: url("../img/selfy-foto.jpg");
             background-size: cover;
             background-position: center;
-            margin-bottom: 40px; }
+            margin-bottom: 40px;
+            -ms-grid-row: 1; }
+          .header .header__container .header__main-content .container .circle-foto .header__button {
+            -ms-grid-row: 2; }
         .header .header__container .header__main-content .container .header__caption {
           grid-row: 1;
           align-content: center;
           width: initial;
           max-width: 700px;
           text-align: left;
-          padding-left: 80px; }
+          padding-left: 80px;
+          -ms-grid-column: 2; }
           .header .header__container .header__main-content .container .header__caption .header__caption-foto-container {
             position: relative; }
             .header .header__container .header__main-content .container .header__caption .header__caption-foto-container .editor-container {
@@ -264,6 +269,12 @@ a {
   color: rgba(56, 67, 62, 0.9); }
   .experience-section__main-content .experience-section__item {
     padding: 0 20px; }
+    .experience-section__main-content .experience-section__item:nth-child(1) {
+      -ms-grid-column: 1; }
+    .experience-section__main-content .experience-section__item:nth-child(2) {
+      -ms-grid-column: 2; }
+    .experience-section__main-content .experience-section__item:nth-child(3) {
+      -ms-grid-column: 3; }
     .experience-section__main-content .experience-section__item .experience-section__link {
       color: rgba(56, 67, 62, 0.9); }
       .experience-section__main-content .experience-section__item .experience-section__link .experience-section__icon {
@@ -276,14 +287,10 @@ a {
         display: table-cell;
         vertical-align: middle;
         transition: background-color 1.2s ease, color 1.2s ease, border-color 1.2s ease; }
-        .experience-section__main-content .experience-section__item .experience-section__link .experience-section__icon.desktop-icon {
-          -ms-grid-column: 1; }
         .experience-section__main-content .experience-section__item .experience-section__link .experience-section__icon.desktop-icon::before {
           content: '\f108'; }
         .experience-section__main-content .experience-section__item .experience-section__link .experience-section__icon.users-icon::before {
           content: '\f0c0'; }
-        .experience-section__main-content .experience-section__item .experience-section__link .experience-section__icon.code-icon {
-          -ms-grid-column: 3; }
         .experience-section__main-content .experience-section__item .experience-section__link .experience-section__icon.code-icon::before {
           content: '\f121'; }
         .experience-section__main-content .experience-section__item .experience-section__link .experience-section__icon:hover {
