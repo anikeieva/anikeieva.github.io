@@ -102,7 +102,8 @@ a {
             transform: rotate(90deg) rotateX(0); }
     .header .menu-container__side-bar .menu {
       padding: 47.5px 50px;
-      text-align: center; }
+      text-align: center;
+      list-style-type: none; }
       .header .menu-container__side-bar .menu .menu__item {
         padding: 30px 20px;
         font-size: 23px;

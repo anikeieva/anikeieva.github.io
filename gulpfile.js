@@ -1,6 +1,7 @@
 var gulp = require('gulp'),
     sass = require('gulp-sass'),
-    browser_sync = require('browser-sync');
+    browser_sync = require('browser-sync'),
+    babel = require("gulp-babel");
 
 gulp.task('sass', function() {
   return gulp.src('app/sass/**/*.sass')
@@ -24,6 +25,10 @@ gulp.task('watch', ['browser-sync', 'sass'], function() {
   gulp.watch('app/js/**/*.js', browser_sync.reload)
 });
 
-gulp.task('default', function(){
-  //gulp.start('some_task');
+gulp.task("default", function () {
+  return gulp.src("app/js/*.js")
+    .pipe(babel({
+			presets: ['es2015']
+		}))
+    .pipe(gulp.dest("app/js5"));
 });

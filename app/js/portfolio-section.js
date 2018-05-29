@@ -3,8 +3,6 @@ function ready() {
   let portfolioHoverText = document.getElementsByClassName('portfolio-section__hover-text')[0];
   let portfolioSection = document.getElementsByClassName('portfolio-section')[0];
 
-  console.log(portfolioHoverText);
-
   function hoverPortfolioSlide() {
 
     portfolioHoverText.classList.toggle('visible');
