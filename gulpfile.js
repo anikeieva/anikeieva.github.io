@@ -3,6 +3,7 @@ var gulp = require('gulp'),
     browser_sync = require('browser-sync'),
     babel = require("gulp-babel");
 
+
 gulp.task('sass', function() {
   return gulp.src('app/sass/**/*.sass')
   .pipe(sass())
@@ -31,4 +32,16 @@ gulp.task("default", function () {
 			presets: ['es2015']
 		}))
     .pipe(gulp.dest("app/js5"));
+});
+
+gulp.task('autoprefixer', function () {
+    var postcss      = require('gulp-postcss');
+    var sourcemaps   = require('gulp-sourcemaps');
+    var autoprefixer = require('autoprefixer');
+
+    return gulp.src('app/css/*.css')
+        .pipe(sourcemaps.init())
+        .pipe(postcss([ autoprefixer() ]))
+        .pipe(sourcemaps.write('.'))
+        .pipe(gulp.dest('./app/css_pre'));
 });
