@@ -33,15 +33,3 @@ gulp.task("default", function () {
 		}))
     .pipe(gulp.dest("app/js5"));
 });
-
-gulp.task('autoprefixer', function () {
-    var postcss      = require('gulp-postcss');
-    var sourcemaps   = require('gulp-sourcemaps');
-    var autoprefixer = require('autoprefixer');
-
-    return gulp.src('app/css/*.css')
-        .pipe(sourcemaps.init())
-        .pipe(postcss([ autoprefixer() ]))
-        .pipe(sourcemaps.write('.'))
-        .pipe(gulp.dest('./app/css_pre'));
-});

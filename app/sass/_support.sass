@@ -41,6 +41,8 @@
 
   .experience-section__main-content
     .experience-section__item
+      width: 100%
+      float: none
       .experience-section__link
         .experience-section__icon:hover
           background-color: $dark-background-09-opacity
@@ -97,6 +99,8 @@
   .experience-section__main-content
     .experience-section__item
       margin-bottom: 20px
+      width: 100%
+      float: none
       &:nth-child(3)
         margin-bottom: 0
       .experience-section__link
@@ -126,3 +130,93 @@
             .header__caption
               float: left
               clear: both
+
+// Safari 5+
+@media only screen and (-webkit-min-device-pixel-ratio: 1)
+  ::i-block-chrome, .header
+    .menu-container__side-bar
+      .menu-container__toggle-btn
+        left: 105%
+
+  ::i-block-chrome, .grid
+    display: block
+
+  ::i-block-chrome, .header
+    .menu-container__side-bar
+      .menu
+        .menu__item
+    .menu-container__side-bar
+      height: 100%
+    .header__container
+      display: table
+      .header__main-content
+        .container
+          .circle-foto
+            display: table-cell
+            vertical-align: middle
+            .header__caption-container
+          .header__caption
+            display: table-cell
+            vertical-align: middle
+
+@media screen and (max-width: 800px)
+  ::i-block-chrome, .header
+    .header__container
+      .header__main-content
+        .container
+          .circle-foto
+            float: left
+            display: block
+            clear: both
+            width: 100%
+            height: auto
+          .header__caption
+            float: left
+            display: block
+            clear: both
+
+@supports (display: grid)
+  .grid
+    display: grid
+
+  .header
+    .header__container
+      .header__main-content
+        align-content: center
+        .container
+          align-content: center
+          .circle-foto
+            grid-row: 1
+            align-content: center
+            .header__caption-container
+            .header__button
+          .header__caption
+            grid-row: 1
+            align-content: center
+  .header__line-side
+      align-content: center
+
+  .section
+    .section__container
+      align-content: center
+
+  .experience-section__main-content
+    grid-template-columns: repeat(3, 1fr)
+    .experience-section__item
+      width: 100%
+      float: none
+      .experience-section__link
+        .experience-section__icon
+          &.users-icon:hover::before
+            display: grid
+          &.code-icon:hover::before
+            display: grid
+
+  .about-me-section
+    .section__main-content
+      grid-template-columns: repeat(2, 1fr)
+
+  .gallery-section
+    .section__container
+      .section__main-content
+        grid-template-columns: 1fr

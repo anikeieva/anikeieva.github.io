@@ -45,6 +45,8 @@ $footer-background: #1f1d1d
     .menu-container__toggle-btn
       position: absolute
       left: calc(100% + 30px)
+      left: -webkit-calc(100% + 30px)
+      left: -moz-calc(100% + 30px)
       top: 20px
       cursor: pointer
       i
@@ -52,11 +54,19 @@ $footer-background: #1f1d1d
         color: white
         &.no-active-bars
           -webkit-text-stroke: 2px $bright-color
+          -moz-text-stroke: 2px $bright-color
         &.fa-times
           font-size: 45px
           transition: transform .5s ease
+          -webkit-transition: transform .5s ease
+          -moz-transition: transform .5s ease
+          -o-transition: transform .5s ease
           &:hover
             transform: rotate(90deg) rotateX(0)
+            -webkit-ransform: rotate(90deg) rotateX(0)
+            -ms-transform: rotate(90deg) rotateX(0)
+            -moz-transform: rotate(90deg) rotateX(0)
+            -o-transform: rotate(90deg) rotateX(0)
     .menu
       padding: 47.5px 50px
       text-align: center
@@ -69,6 +79,9 @@ $footer-background: #1f1d1d
           border-bottom: 0
         .menu__link
           transition: color .5s ease
+          -webkit-ransition: color .5s ease
+          -moz-transition: color .5s ease
+          -o-transition: color .5s ease
           &:hover
             color: $brown-light
   .header__container
@@ -79,32 +92,46 @@ $footer-background: #1f1d1d
     .header__main-content
       float: left
       width: calc(100% - 60px)
+      width: -webkit-calc(100% - 60px)
+      width: -moz-calc(100% - 60px)
       height: calc(100vh - 60px)
+      height: -webkit-calc(100vh - 60px)
+      height: -moz-calc(100vh - 60px)
       min-height: 560px
-      align-content: center
+      // align-content: center
+      display: -webkit-box
+      -webkit-box-align: center
+      -webkit-box-pack: center
+      display: -moz-box
+      -moz-box-align: center
+      -moz-box-pack: center
       .container
         width: initial
         margin: 0 auto
-        align-content: center
+        // align-content: center
         max-height: 560px
         .circle-foto
-          grid-row: 1
+          // grid-row: 1
           height: calc(100vh - 60px)
+          height: -webkit-calc(100vh - 60px)
+          height: -moz-calc(100vh - 60px)
           max-height: 560px
           min-height: 560px
-          align-content: center
+          // align-content: center
           .header__caption-container
             width: 280px
             height: 280px
             border-radius: 50%
+            -webkit-border-radius: 50%
+            -moz-border-radius: 50%
             background-image: url('../img/selfy-foto.jpg')
             background-size: cover
             background-position: center
             margin-bottom: 40px
           .header__button
         .header__caption
-          grid-row: 1
-          align-content: center
+          // grid-row: 1
+          // align-content: center
           width: initial
           max-width: 700px
           text-align: left
@@ -124,10 +151,14 @@ $footer-background: #1f1d1d
                 font-weight: 600
 .header__line-side
     position: fixed
-    top: calc(50vh - 170px)
+    top: 50%
+    transform: translateY(-50%)
+    -webkit-transform: translateY(-50%)
+    -ms-transform: translateY(-50%)
+    -moz-transform: translateY(-50%)
+    -o-transform: translateY(-50%)
     right: 30px
-    // left: calc(25% + 30px)
-    align-content: center
+    // align-content: center
     &.header__line-side_left
       left: 380px
     .sosials
@@ -150,6 +181,9 @@ $footer-background: #1f1d1d
             display: table-cell
             vertical-align: middle
             transition: background-color .5s ease
+            -webkit-ransition: background-color .5s ease
+            -moz-transition: background-color .5s ease
+            -o-transition: background-color .5s ease
             &.fa-github:hover
               background-color: $github-background
             &.fa-linkedin:hover
@@ -169,6 +203,9 @@ $footer-background: #1f1d1d
         font-size: 22px
         font-weight: 600
         transition: background-color .5s ease
+        -webkit-ransition: background-color .5s ease
+        -moz-transition: background-color .5s ease
+        -o-transition: background-color .5s ease
         &:hover
           background-color: $dark-background-09-opacity
         &.active
@@ -186,6 +223,9 @@ $footer-background: #1f1d1d
   font-size: 22px
   font-weight: 600
   transition: color .8s ease
+  -webkit-ransition: color .8s ease
+  -moz-transition: color .8s ease
+  -o-transition: color .8s ease
   &:hover
     color: $green-light
 
@@ -203,7 +243,7 @@ $footer-background: #1f1d1d
 .section
   .section__container
     padding: 70px 100px 70px 80px
-    align-content: center
+    // align-content: center
     .section__main-content
       padding: 0 0 0 20px
     .section__caption-container
@@ -218,12 +258,14 @@ $footer-background: #1f1d1d
         font-weight: 300
 
 .experience-section__main-content
-  grid-template-columns: repeat(3, 1fr)
+  // grid-template-columns: repeat(3, 1fr)
   -ms-grid-columns: 1fr 1fr 1fr
   text-align: center
   color: $dark-background-09-opacity
   .experience-section__item
     padding: 0 20px
+    width: 33.3%
+    float: left
     &:nth-child(1)
       -ms-grid-column: 1
     &:nth-child(2)
@@ -233,6 +275,7 @@ $footer-background: #1f1d1d
     .experience-section__link
       color: $dark-background-09-opacity
       .experience-section__icon
+        position: relative
         font-size: 60px
         font-family: 'FontAwesome'
         width: 150px
@@ -242,6 +285,9 @@ $footer-background: #1f1d1d
         display: table-cell
         vertical-align: middle
         transition: background-color 1.2s ease, color 1.2s ease, border-color 1.2s ease
+        -webkit-ransition: background-color 1.2s ease, color 1.2s ease, border-color 1.2s ease
+        -moz-transition: background-color 1.2s ease, color 1.2s ease, border-color 1.2s ease
+        -o-transition: background-color 1.2s ease, color 1.2s ease, border-color 1.2s ease
         &.desktop-icon::before
           content: '\f108'
         &.users-icon::before
@@ -253,7 +299,7 @@ $footer-background: #1f1d1d
           color: white
           border-color: $dark-background-09-opacity
         &.users-icon:hover::before
-          display: grid
+          // display: grid
           display: -ms-grid
           font-family: monospace
           content: 'View gallery'
@@ -265,6 +311,9 @@ $footer-background: #1f1d1d
           text-align: center
         &.users-icon
           transition: background-color 1.2s ease, background-image 1.2s ease, background-size 1.2s ease, background-position 1.2s ease, background-repeat 1.2s ease
+          -webkit-ransition: background-color 1.2s ease, background-image 1.2s ease, background-size 1.2s ease, background-position 1.2s ease, background-repeat 1.2s ease
+          -moz-transition: background-color 1.2s ease, background-image 1.2s ease, background-size 1.2s ease, background-position 1.2s ease, background-repeat 1.2s ease
+          -o-transition: background-color 1.2s ease, background-image 1.2s ease, background-size 1.2s ease, background-position 1.2s ease, background-repeat 1.2s ease
           -ms-grid-column: 2
           &:hover
             background-image: url(../img/about_me/gallery.svg)
@@ -272,7 +321,7 @@ $footer-background: #1f1d1d
             background-position: center
             background-repeat: no-repeat
         &.code-icon:hover::before
-          display: grid
+          // display: grid
           display: -ms-grid
           font-family: monospace
           content: 'View portfolio'
@@ -312,8 +361,15 @@ $footer-background: #1f1d1d
           width: 75%
           margin: 0 auto
           transition: transform 1.2s ease
+          -webkit-ransition: transform 1.2s ease
+          -moz-transition: transform 1.2s ease
+          -o-transition: transform 1.2s ease
           &:hover
             transform: translateX(20px)
+            -webkit-ransform: translateX(20px)
+            -ms-transform: translateX(20px)
+            -moz-transform: translateX(20px)
+            -o-transform: translateX(20px)
           &-img
             width: 100%
         .portfolio-section__hover-text
@@ -332,14 +388,14 @@ $footer-background: #1f1d1d
 
 .about-me-section
   .section__main-content
-    grid-template-columns: repeat(2, 1fr)
-    -ms-grid-columns: 1fr 1fr
+    // grid-template-columns: repeat(2, 1fr)
+    // -ms-grid-columns: 1fr 1fr
     .about-me-section__item
       padding: 10px 20px
-      &_img
-        -ms-grid-column: 1
-      &_text
-        -ms-grid-column: 2
+      // &_img
+      //   -ms-grid-column: 1
+      // &_text
+      //   -ms-grid-column: 2
       .about-me-section__img
         width: 100%
       .about-me-section__text
@@ -357,6 +413,9 @@ $footer-background: #1f1d1d
           background-color: rgba(255, 255, 255, 0.3)
           padding: 1px
           transition: color .6s ease
+          -webkit-ransition: color .6s ease
+          -moz-transition: color .6s ease
+          -o-transition: color .6s ease
           &:hover
             color: $dark-background
 
@@ -373,6 +432,9 @@ $footer-background: #1f1d1d
       font-size: 18px
       font-family: monospace
       transition: background-color .6s ease
+      -webkit-ransition: background-color .6s ease
+      -moz-transition: background-color .6s ease
+      -o-transition: background-color .6s ease
       &:hover
         background-color: rgba(56, 67, 62, 1)
 
@@ -380,12 +442,16 @@ $footer-background: #1f1d1d
   .section__container
     .section__main-content
       position: relative
-      grid-template-columns: 1fr
+      // grid-template-columns: 1fr
       padding: 0 0 0 10px
       .gallery-section__angle-button
         position: absolute
         top: 50%
         transform: translateY(-50%)
+        -webkit-transform: translateY(-50%)
+        -ms-transform: translateY(-50%)
+        -moz-transform: translateY(-50%)
+        -o-transform: translateY(-50%)
         color: white
         font-size: 65px
         cursor: pointer
@@ -412,5 +478,5 @@ $footer-background: #1f1d1d
     .section__main-content
       padding: 0
 
-@import 'media'
 @import 'support'
+@import 'media'
