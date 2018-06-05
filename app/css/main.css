@@ -136,8 +136,7 @@ a {
           height: calc(100vh - 60px);
           max-height: 560px;
           min-height: 560px;
-          align-content: center;
-          -ms-grid-column: 1; }
+          align-content: center; }
           .header .header__container .header__main-content .container .circle-foto .header__caption-container {
             width: 280px;
             height: 280px;
@@ -145,18 +144,14 @@ a {
             background-image: url("../img/selfy-foto.jpg");
             background-size: cover;
             background-position: center;
-            margin-bottom: 40px;
-            -ms-grid-row: 1; }
-          .header .header__container .header__main-content .container .circle-foto .header__button {
-            -ms-grid-row: 2; }
+            margin-bottom: 40px; }
         .header .header__container .header__main-content .container .header__caption {
           grid-row: 1;
           align-content: center;
           width: initial;
           max-width: 700px;
           text-align: left;
-          padding-left: 80px;
-          -ms-grid-column: 2; }
+          padding-left: 80px; }
           .header .header__container .header__main-content .container .header__caption .header__caption-foto-container {
             position: relative; }
             .header .header__container .header__main-content .container .header__caption .header__caption-foto-container .editor-container {
@@ -299,6 +294,7 @@ a {
           border-color: rgba(56, 67, 62, 0.9); }
         .experience-section__main-content .experience-section__item .experience-section__link .experience-section__icon.users-icon:hover::before {
           display: grid;
+          display: -ms-grid;
           font-family: monospace;
           content: 'View gallery';
           padding: 0 10px;
@@ -317,6 +313,7 @@ a {
             background-repeat: no-repeat; }
         .experience-section__main-content .experience-section__item .experience-section__link .experience-section__icon.code-icon:hover::before {
           display: grid;
+          display: -ms-grid;
           font-family: monospace;
           content: 'View portfolio';
           padding: 0 10px;
@@ -459,9 +456,16 @@ a {
     padding: 90px 80px 90px 70px; }
   .about-me-section .section__main-content {
     grid-template-columns: 1fr;
-    grid-rows: 2; }
+    -ms-grid-columns: 1fr;
+    grid-rows: 2;
+    -ms-grid-rows: 2; }
     .about-me-section .section__main-content .about-me-section__item {
       padding: 10px 0; }
+      .about-me-section .section__main-content .about-me-section__item_img {
+        -ms-grid-row: 1; }
+      .about-me-section .section__main-content .about-me-section__item_text {
+        -ms-grid-row: 2;
+        -ms-grid-column: 1; }
       .about-me-section .section__main-content .about-me-section__item .about-me-section__img {
         display: block;
         width: 35%;
@@ -488,15 +492,26 @@ a {
     width: 70%;
     margin: 0 auto;
     grid-template-columns: 1fr 1fr;
-    grid-row: 2; }
+    -ms-grid-columns: 1fr;
+    grid-row: 2;
+    -ms-grid-rows: 3; }
+    .experience-section__main-content .experience-section__item:nth-child(1) {
+      -ms-grid-column: 1; }
+    .experience-section__main-content .experience-section__item:nth-child(2) {
+      -ms-grid-column: 1; }
+    .experience-section__main-content .experience-section__item:nth-child(3) {
+      -ms-grid-column: 1; }
     .experience-section__main-content .experience-section__item_freelance {
-      grid-row: 1; }
+      grid-row: 1;
+      -ms-grid-row: 1; }
     .experience-section__main-content .experience-section__item_lecture {
       grid-row: 2;
+      -ms-grid-row: 2;
       grid-column: 1/3;
       margin-top: 20px; }
     .experience-section__main-content .experience-section__item_websites {
-      grid-row: 1; }
+      grid-row: 1;
+      -ms-grid-row: 3; }
   .gallery-section .section__main-content .gallery-section__item {
     height: 50vh; }
   .footer .section__container {
@@ -535,7 +550,7 @@ a {
       width: 100%; }
       .header .header__container .header__main-content .container {
         grid-template-rows: 2;
-        max-height: fit-content; }
+        max-height: 100%; }
         .header .header__container .header__main-content .container .circle-foto {
           height: auto;
           min-height: auto;
@@ -747,3 +762,97 @@ a {
         padding: 10px 20px;
         font-size: 20px;
         border-bottom: 0; } }
+
+@supports (-ms-ime-align: auto) {
+  .header .menu-container__side-bar .menu {
+    display: block; }
+    .header .menu-container__side-bar .menu .menu__item {
+      display: block; }
+  .header .header__container {
+    display: table; }
+    .header .header__container .header__main-content {
+      display: table-cell;
+      vertical-align: middle;
+      text-align: center; }
+      .header .header__container .header__main-content::before {
+        content: '';
+        display: inline-block;
+        vertical-align: middle;
+        height: 100%; }
+      .header .header__container .header__main-content .container {
+        display: inline-block;
+        vertical-align: middle;
+        text-align: left;
+        width: auto; }
+        .header .header__container .header__main-content .container .circle-foto {
+          display: table-cell;
+          vertical-align: middle; }
+        .header .header__container .header__main-content .container .header__caption {
+          display: table-cell;
+          vertical-align: middle; }
+  .experience-section__main-content .experience-section__item {
+    margin-bottom: 20px; }
+    .experience-section__main-content .experience-section__item:nth-child(3) {
+      margin-bottom: 0; }
+    .experience-section__main-content .experience-section__item .experience-section__link .experience-section__icon {
+      position: relative; }
+  .experience-section__main-content .experience-section__item .experience-section__link .experience-section__icon:hover {
+    background-color: rgba(56, 67, 62, 0.9);
+    color: white;
+    border-color: rgba(56, 67, 62, 0.9); }
+  @media screen and (max-width: 800px) {
+    .header .header__container .header__main-content .container .circle-foto {
+      float: left;
+      clear: both;
+      width: 100%; }
+    .header .header__container .header__main-content .container .header__caption {
+      float: left;
+      clear: both; } } }
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .header .menu-container__side-bar .menu {
+    display: block; }
+    .header .menu-container__side-bar .menu .menu__item {
+      display: block; }
+  .header .header__container {
+    display: table; }
+    .header .header__container .header__main-content {
+      display: table-cell;
+      vertical-align: middle;
+      text-align: center; }
+      .header .header__container .header__main-content::before {
+        content: '';
+        display: inline-block;
+        vertical-align: middle;
+        height: 100%; }
+      .header .header__container .header__main-content .container {
+        display: inline-block;
+        vertical-align: middle;
+        text-align: left;
+        width: auto; }
+        .header .header__container .header__main-content .container .circle-foto {
+          display: table-cell;
+          vertical-align: middle; }
+        .header .header__container .header__main-content .container .header__caption {
+          display: table-cell;
+          vertical-align: middle; }
+  .experience-section__main-content .experience-section__item {
+    margin-bottom: 20px; }
+    .experience-section__main-content .experience-section__item:nth-child(3) {
+      margin-bottom: 0; }
+    .experience-section__main-content .experience-section__item .experience-section__link .experience-section__icon {
+      position: relative; }
+  .experience-section__main-content .experience-section__item .experience-section__link .experience-section__icon:hover {
+    background-color: rgba(56, 67, 62, 0.9);
+    color: white;
+    border-color: rgba(56, 67, 62, 0.9); } }
+
+@media screen and (max-width: 800px) {
+  _:-ms-fullscreen .header .header__container .header__main-content .container .circle-foto, :root .header .header__container .header__main-content .container .circle-foto {
+    float: left;
+    clear: both;
+    text-align: center;
+    width: 100%; }
+  _:-ms-fullscreen .header .header__container .header__main-content .container .header__caption, :root .header .header__container .header__main-content .container .header__caption {
+    float: left;
+    clear: both; } }

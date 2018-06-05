@@ -93,7 +93,6 @@ $footer-background: #1f1d1d
           max-height: 560px
           min-height: 560px
           align-content: center
-          -ms-grid-column: 1
           .header__caption-container
             width: 280px
             height: 280px
@@ -102,9 +101,7 @@ $footer-background: #1f1d1d
             background-size: cover
             background-position: center
             margin-bottom: 40px
-            -ms-grid-row: 1
           .header__button
-            -ms-grid-row: 2
         .header__caption
           grid-row: 1
           align-content: center
@@ -112,7 +109,6 @@ $footer-background: #1f1d1d
           max-width: 700px
           text-align: left
           padding-left: 80px
-          -ms-grid-column: 2
           .header__caption-foto-container
             position: relative
             .editor-container
@@ -258,6 +254,7 @@ $footer-background: #1f1d1d
           border-color: $dark-background-09-opacity
         &.users-icon:hover::before
           display: grid
+          display: -ms-grid
           font-family: monospace
           content: 'View gallery'
           padding: 0 10px
@@ -276,6 +273,7 @@ $footer-background: #1f1d1d
             background-repeat: no-repeat
         &.code-icon:hover::before
           display: grid
+          display: -ms-grid
           font-family: monospace
           content: 'View portfolio'
           padding: 0 10px
@@ -415,3 +413,4 @@ $footer-background: #1f1d1d
       padding: 0
 
 @import 'media'
+@import 'support'
