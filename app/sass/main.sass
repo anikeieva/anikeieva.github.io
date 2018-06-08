@@ -68,10 +68,12 @@ $footer-background: #1f1d1d
             -moz-transform: rotate(90deg) rotateX(0)
             -o-transform: rotate(90deg) rotateX(0)
     .menu
+      display: block
       padding: 47.5px 50px
       text-align: center
       list-style-type: none
       .menu__item
+        display: block
         padding: 30px 20px
         font-size: 23px
         border-bottom: 1px solid $white-with-05-opacity
@@ -85,6 +87,7 @@ $footer-background: #1f1d1d
           &:hover
             color: $brown-light
   .header__container
+    display: table
     padding: 30px 130px 30px 70px
     height: 100vh
     min-height: 600px
@@ -98,6 +101,8 @@ $footer-background: #1f1d1d
       height: -webkit-calc(100vh - 60px)
       height: -moz-calc(100vh - 60px)
       min-height: 560px
+      display: table-cell
+      vertical-align: middle
       // align-content: center
       display: -webkit-box
       -webkit-box-align: center
@@ -105,12 +110,21 @@ $footer-background: #1f1d1d
       display: -moz-box
       -moz-box-align: center
       -moz-box-pack: center
+      &::before
+        content: ''
+        display: inline-block
+        vertical-align: middle
+        height: 100%
       .container
+        display: inline-block
+        vertical-align: middle
         width: initial
         margin: 0 auto
         // align-content: center
         max-height: 560px
         .circle-foto
+          display: table-cell
+          vertical-align: middle
           // grid-row: 1
           height: calc(100vh - 60px)
           height: -webkit-calc(100vh - 60px)
@@ -130,6 +144,8 @@ $footer-background: #1f1d1d
             margin-bottom: 40px
           .header__button
         .header__caption
+          display: table-cell
+          vertical-align: middle
           // grid-row: 1
           // align-content: center
           width: initial
@@ -273,6 +289,12 @@ $footer-background: #1f1d1d
     &:nth-child(3)
       -ms-grid-column: 3
     .experience-section__link
+      display: -webkit-box
+      -webkit-box-pack: center
+      -webkit-box-align: center
+      display: -moz-box
+      -moz-box-pack: center
+      -moz-box-align: center
       color: $dark-background-09-opacity
       .experience-section__icon
         position: relative
@@ -284,6 +306,12 @@ $footer-background: #1f1d1d
         border-radius: 75px
         display: table-cell
         vertical-align: middle
+        display: -webkit-box
+        -webkit-box-pack: center
+        -webkit-box-align: center
+        display: -moz-box
+        -moz-box-pack: center
+        -moz-box-align: center
         transition: background-color 1.2s ease, color 1.2s ease, border-color 1.2s ease
         -webkit-ransition: background-color 1.2s ease, color 1.2s ease, border-color 1.2s ease
         -moz-transition: background-color 1.2s ease, color 1.2s ease, border-color 1.2s ease
@@ -309,6 +337,10 @@ $footer-background: #1f1d1d
           color: white
           align-content: center
           text-align: center
+          display: -webkit-box
+          -webkit-box-pack: center
+          display: -moz-box
+          -moz-box-pack: center
         &.users-icon
           transition: background-color 1.2s ease, background-image 1.2s ease, background-size 1.2s ease, background-position 1.2s ease, background-repeat 1.2s ease
           -webkit-ransition: background-color 1.2s ease, background-image 1.2s ease, background-size 1.2s ease, background-position 1.2s ease, background-repeat 1.2s ease
@@ -331,6 +363,10 @@ $footer-background: #1f1d1d
           color: white
           align-content: center
           text-align: center
+          display: -webkit-box
+          -webkit-box-pack: center
+          display: -moz-box
+          -moz-box-pack: center
         &.code-icon:hover
           background-image: url(../img/about_me/coding.svg)
           background-size: cover
@@ -389,13 +425,15 @@ $footer-background: #1f1d1d
 .about-me-section
   .section__main-content
     // grid-template-columns: repeat(2, 1fr)
-    // -ms-grid-columns: 1fr 1fr
+    -ms-grid-columns: 1fr 1fr
     .about-me-section__item
+      width: 50%
+      float: left
       padding: 10px 20px
-      // &_img
-      //   -ms-grid-column: 1
-      // &_text
-      //   -ms-grid-column: 2
+      &_img
+        -ms-grid-column: 1
+      &_text
+        -ms-grid-column: 2
       .about-me-section__img
         width: 100%
       .about-me-section__text
