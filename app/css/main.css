@@ -456,7 +456,7 @@ a {
       margin: 0 auto;
       font-size: 20px; }
       .portfolio-section .section__container .section__main-content .portfolio-section__hover-text.visible {
-        display: block; }
+        display: table; }
 
 .about-me-section .section__main-content {
   -ms-grid-columns: 1fr 1fr; }
@@ -669,9 +669,7 @@ a {
     border-color: rgba(56, 67, 62, 0.9); }
   .about-me-section .section__main-content .about-me-section__item {
     width: 100%;
-    float: none; }
-  .portfolio-section .section__container .section__main-content .portfolio-section__hover-text.visible {
-    display: table; } }
+    float: none; } }
 
 @media screen and (max-width: 800px) {
   _:-ms-fullscreen .header .header__container .header__main-content .container .circle-foto, :root .header .header__container .header__main-content .container .circle-foto {
@@ -700,7 +698,9 @@ a {
       vertical-align: middle; }
   ::i-block-chrome .section__container .section__main-content .portfolio-section__hover-text, .portfolio-section .section__container .section__main-content .portfolio-section__hover-text {
     min-width: 260px;
-    -webkit-transform: translate(-50%, -50%); } }
+    -webkit-transform: translate(-50%, -50%); }
+  ::i-block-chrome .section__container .section__main-content .portfolio-section__hover-text.visible, .portfolio-section .section__container .section__main-content .portfolio-section__hover-text.visible {
+    display: block; } }
 
 @media screen and (max-width: 800px) {
   ::i-block-chrome .header__container .header__main-content .container .circle-foto, .header .header__container .header__main-content .container .circle-foto {
@@ -861,10 +861,12 @@ a {
   .header .header__line-side {
     position: absolute;
     right: auto;
-    left: calc(50% - 120px);
-    left: -webkit-calc(50% - 120px);
-    left: -moz-calc(50% - 120px);
-    top: 35px;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    top: 20px;
     align-content: flex-start; }
     .header .header__line-side .sosials .sosials__item {
       display: inline-block;

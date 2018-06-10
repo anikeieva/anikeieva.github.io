@@ -187,13 +187,6 @@
         width: 100%
         float: none
 
-  .portfolio-section
-    .section__container
-      .section__main-content
-        .portfolio-section__hover-text
-          &.visible
-            display: table
-
 @media screen and (max-width: 800px)
   _:-ms-fullscreen, :root
     .header
@@ -243,7 +236,15 @@
         .section__main-content
           .portfolio-section__hover-text
             min-width: 260px
+            // max-width: 400px
             -webkit-transform: translate(-50%, -50%)
+
+  ::i-block-chrome, .portfolio-section
+      .section__container
+        .section__main-content
+          .portfolio-section__hover-text
+            &.visible
+              display: block
 
 @media screen and (max-width: 800px)
   ::i-block-chrome, .header
