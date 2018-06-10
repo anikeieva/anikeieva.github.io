@@ -130,6 +130,13 @@
         width: 100%
         float: none
 
+  .portfolio-section
+    .section__container
+      .section__main-content
+        .portfolio-section__hover-text
+          &.visible
+            display: table
+
   @media screen and (max-width: 800px)
     .header
       .header__line-side
@@ -180,6 +187,13 @@
         width: 100%
         float: none
 
+  .portfolio-section
+    .section__container
+      .section__main-content
+        .portfolio-section__hover-text
+          &.visible
+            display: table
+
 @media screen and (max-width: 800px)
   _:-ms-fullscreen, :root
     .header
@@ -228,6 +242,7 @@
       .section__container
         .section__main-content
           .portfolio-section__hover-text
+            min-width: 260px
             -webkit-transform: translate(-50%, -50%)
 
 @media screen and (max-width: 800px)

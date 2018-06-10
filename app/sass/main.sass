@@ -26,7 +26,7 @@ $footer-background: #1f1d1d
   background-position: center
   height: 100vh
   min-height: 600px
-  max-height: 1000px
+  max-height: 3000px
   .menu-container__side-bar
     z-index: 4
     position: fixed
@@ -37,7 +37,7 @@ $footer-background: #1f1d1d
     width: 350px
     height: 100vh
     min-height: 600px
-    max-height: 1000px
+    max-height: 3000px
     background-color: $bright-color
     transition: left .4s ease
     &.active
@@ -91,7 +91,7 @@ $footer-background: #1f1d1d
     padding: 30px 130px 30px 70px
     height: 100vh
     min-height: 600px
-    max-height: 1000px
+    max-height: 3000px
     .header__main-content
       float: left
       width: calc(100% - 60px)
@@ -411,9 +411,16 @@ $footer-background: #1f1d1d
         .portfolio-section__hover-text
           display: none
           position: absolute
-          top: 50%
-          left: 50%
+          top: 50% !important
+          left: 50% !important
+          transform: translate(-50%, -50%)
+          -webkit-transform: translate(-50%, -50%)
+          -moz-transform: translate(-50%, -50%)
+          -o-transform: translate(-50%, -50%)
           width: fit-content
+          width: intrinsic         
+          width: -moz-max-content
+          width: -webkit-max-content
           height: fit-content
           background-color: $bright-color-opacity
           padding: 15px 30px
