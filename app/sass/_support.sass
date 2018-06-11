@@ -236,8 +236,6 @@
         .section__main-content
           .portfolio-section__hover-text
             min-width: 260px
-            // max-width: 400px
-            -webkit-transform: translate(-50%, -50%)
 
   ::i-block-chrome, .portfolio-section
       .section__container
@@ -246,21 +244,26 @@
             &.visible
               display: block
 
-@media screen and (max-width: 800px)
-  ::i-block-chrome, .header
-    .header__container
-      .header__main-content
-        .container
-          .circle-foto
-            height: 100%
-            min-height: 0
-            float: left
-            display: block
-            clear: both
-            width: 100%
-            height: auto
-          .header__caption
-            float: left
-            display: block
-            clear: both
-            margin-top: 20px
+  @media screen and (max-width: 800px)
+    ::i-block-chrome, .header
+      .header__container
+        .header__main-content
+          .container
+            .circle-foto
+              height: 100%
+              min-height: 0
+              float: left
+              display: block
+              clear: both
+              width: 100%
+              height: auto
+            .header__caption
+              float: left
+              display: block
+              clear: both
+              margin-top: 20px
+
+  @media only screen and (max-width : 700px)
+    ::i-block-chrome, .header
+      .header__line-side
+        min-width: 286px

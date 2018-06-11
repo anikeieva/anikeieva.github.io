@@ -1,5 +1,7 @@
 * {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box; }
   *:before, *:after {
     box-sizing: border-box; }
 
@@ -697,12 +699,11 @@ a {
       display: table-cell;
       vertical-align: middle; }
   ::i-block-chrome .section__container .section__main-content .portfolio-section__hover-text, .portfolio-section .section__container .section__main-content .portfolio-section__hover-text {
-    min-width: 260px;
-    -webkit-transform: translate(-50%, -50%); }
+    min-width: 260px; }
   ::i-block-chrome .section__container .section__main-content .portfolio-section__hover-text.visible, .portfolio-section .section__container .section__main-content .portfolio-section__hover-text.visible {
     display: block; } }
 
-@media screen and (max-width: 800px) {
+@media only screen and (-webkit-min-device-pixel-ratio: 1) and (max-width: 800px) {
   ::i-block-chrome .header__container .header__main-content .container .circle-foto, .header .header__container .header__main-content .container .circle-foto {
     height: 100%;
     min-height: 0;
@@ -716,6 +717,10 @@ a {
     display: block;
     clear: both;
     margin-top: 20px; } }
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1) and (max-width: 700px) {
+  ::i-block-chrome .header__line-side, .header .header__line-side {
+    min-width: 286px; } }
 
 @media only screen and (max-width: 1100px) {
   .header .menu-container__side-bar .menu-container__toggle-btn {
@@ -867,7 +872,9 @@ a {
     -moz-transform: translateX(-50%);
     -o-transform: translateX(-50%);
     top: 20px;
-    align-content: flex-start; }
+    align-content: flex-start;
+    width: fit-content;
+    display: table; }
     .header .header__line-side .sosials .sosials__item {
       display: inline-block;
       margin-bottom: 0;
@@ -926,9 +933,9 @@ a {
   .header .menu-container__side-bar .menu .menu__item {
     font-size: 21px; }
   .header .menu-container__side-bar .menu-container__toggle-btn {
-    left: calc(100% + 10px);
-    left: -webkit-calc(100% + 10px);
-    left: -moz-calc(100% + 10px); }
+    left: calc(100% + 10px) !important;
+    left: -webkit-calc(100% + 10px) !important;
+    left: -moz-calc(100% + 10px) !important; }
     .header .menu-container__side-bar .menu-container__toggle-btn i {
       font-size: 40px; }
   .footer .section__container {
