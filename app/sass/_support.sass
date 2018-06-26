@@ -236,11 +236,6 @@
         .section__main-content
           .portfolio-section__hover-text
             min-width: 260px
-
-  ::i-block-chrome, .portfolio-section
-      .section__container
-        .section__main-content
-          .portfolio-section__hover-text
             &.visible
               display: block
 
@@ -267,3 +262,12 @@
     ::i-block-chrome, .header
       .header__line-side
         min-width: 286px
+
+@media screen and (-webkit-min-device-pixel-ratio:0) and (min-color-index:0)
+  ::i-block-chrome, .portfolio-section
+      .section__container
+        .section__main-content
+          .portfolio-section__hover-text
+            min-width: 260px
+            &.visible
+              display: block

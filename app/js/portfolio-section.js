@@ -1,18 +1,22 @@
 function ready() {
-  let portfolioSlide = document.getElementsByClassName('portfolio__item')[0];
-  let portfolioHoverText = document.getElementsByClassName('portfolio-section__hover-text')[0];
+  let portfolioSlide = document.getElementsByClassName('portfolio__item');
+  let portfolioHoverText = document.getElementsByClassName('portfolio-section__hover-text');
   let portfolioSection = document.getElementsByClassName('portfolio-section')[0];
 
-  function hoverPortfolioSlide() {
+  function hoverPortfolioSlide(index) {
 
-    portfolioHoverText.classList.toggle('visible');
+    const hoverEachPortfolioSlide = () => {
+      portfolioHoverText[index].classList.toggle('visible');
+      portfolioSection.classList.toggle('portfolio-section_hover');
+    };
 
-    portfolioSection.classList.toggle('portfolio-section_hover');
-
+    return hoverEachPortfolioSlide;
   }
 
-  portfolioSlide.addEventListener('mouseover', hoverPortfolioSlide);
-  portfolioSlide.addEventListener('mouseout', hoverPortfolioSlide);
+  for (let i = 0; i < portfolioSlide.length; i++) {
+    portfolioSlide[i].addEventListener('mouseover', hoverPortfolioSlide(i));
+    portfolioSlide[i].addEventListener('mouseout', hoverPortfolioSlide(i));
+  }
 }
 
 document.addEventListener("DOMContentLoaded", ready);

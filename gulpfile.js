@@ -31,5 +31,5 @@ gulp.task("default", function () {
     .pipe(babel({
 			presets: ['es2015']
 		}))
-    .pipe(gulp.dest("app/js5"));
+    .pipe(gulp.dest("app/dist"));
 });
