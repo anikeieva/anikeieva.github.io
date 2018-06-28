@@ -1,4 +1,4 @@
-function ready() {
+function readySideBar() {
   let menu_toggleBtn = document.getElementsByClassName('menu-container__toggle-btn')[0];
   let menu_icon = document.getElementsByClassName('menu-container__icon')[0];
   let menu_sideBar = document.getElementsByClassName('menu-container__side-bar')[0];
@@ -28,4 +28,4 @@ function ready() {
   menu.addEventListener('click', choose_point);
 }
 
-document.addEventListener("DOMContentLoaded", ready);
+document.addEventListener("DOMContentLoaded", readySideBar);

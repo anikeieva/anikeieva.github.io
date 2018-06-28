@@ -1,4 +1,4 @@
-function ready() {
+function readyGalery() {
   let galleryBtnRight = document.getElementsByClassName('gallery-section__angle-button-right')[0];
   let galleryBtnLeft = document.getElementsByClassName('gallery-section__angle-button-left')[0];
   let gallerySslide = document.getElementsByClassName('gallery-section__item')[0];
@@ -64,4 +64,4 @@ function ready() {
 
 }
 
-document.addEventListener("DOMContentLoaded", ready);
+document.addEventListener("DOMContentLoaded", readyGalery);

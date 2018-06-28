@@ -1,4 +1,4 @@
-function ready() {
+function readyPortfolio() {
   let portfolioSlide = document.getElementsByClassName('portfolio__item');
   let portfolioHoverText = document.getElementsByClassName('portfolio-section__hover-text');
   let portfolioSection = document.getElementsByClassName('portfolio-section')[0];
@@ -19,4 +19,4 @@ function ready() {
   }
 }
 
-document.addEventListener("DOMContentLoaded", ready);
+document.addEventListener("DOMContentLoaded", readyPortfolio);
