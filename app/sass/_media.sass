@@ -36,7 +36,8 @@
   .portfolio-section
     .section__container
       .section__main-content
-        .portfolio__item
+        .portfolio__item-description
+          margin-bottom: 30px
           .btm
             margin-left: -5%
             margin-right: auto
@@ -184,6 +185,17 @@
         .about-me-section__img
           width: 40%
 
+  .portfolio-section
+    .section__container
+      .section__main-content
+        .portfolio__item
+          margin-bottom: 60px
+          &-header
+            font-size: 22px
+          &-description
+            margin-bottom: 20px
+            font-size: 16px
+
 @media only screen and (max-width : 700px)
   .section .section__container, .header .header__container
     padding: 50px 30px 50px 50px
@@ -284,7 +296,13 @@
     padding: 0
     .section__main-content
       padding: 0
-      .gallery-section__item
+
+  .portfolio-section
+    .section__container
+      .section__main-content
+        .portfolio__item
+          &-description
+            font-size: 15px
 
 
 @media only screen and (max-width : 500px)
