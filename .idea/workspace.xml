@@ -4,11 +4,6 @@
     <list default="true" id="3e1bbed2-c095-424b-b8aa-f346bd1c71d8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/docs/cv/Alyona_Anikeieva_CV.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/app/docs/cv/Alyona_Anikeieva_CV.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/ua/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/ua/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gulpfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/gulpfile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,7 +105,28 @@
       <option name="project" value="LOCAL" />
       <updated>1588775344620</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Updated info about me">
+      <created>1592971983408</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1592971983408</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Added new experience">
+      <created>1593014797169</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1593014797169</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Added new experience">
+      <created>1593019215676</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1593019215676</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -130,6 +146,8 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="Was added new skills to CV and portfolio tags" />
     <MESSAGE value="Added anika-angular-chat to portfolio" />
     <MESSAGE value="Added new gif of anika-angular-chat to portfolio" />
@@ -137,24 +155,28 @@
     <MESSAGE value="fixed portfolio section styles" />
     <MESSAGE value="Fixed description styles" />
     <MESSAGE value="Fixed description styles and js scripts" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed description styles and js scripts" />
+    <MESSAGE value="Updated info about me" />
+    <MESSAGE value="Added new experience" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added new experience" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="296" y="33" width="1064" height="867" key="CommitChangelistDialog2" timestamp="1588775344401">
-      <screen x="67" y="33" width="1533" height="867" />
+    <state x="113" y="33" width="1064" height="1026" key="CommitChangelistDialog2" timestamp="1593019479015">
+      <screen x="67" y="33" width="1853" height="1047" />
     </state>
     <state x="296" y="33" width="1064" height="867" key="CommitChangelistDialog2/67.33.1533.867@67.33.1533.867" timestamp="1588775344401" />
+    <state x="113" y="33" width="1064" height="1026" key="CommitChangelistDialog2/67.33.1853.1047@67.33.1853.1047" timestamp="1593019479015" />
     <state x="167" y="131" width="1653" height="849" key="DiffContextDialog" timestamp="1592970645761">
       <screen x="67" y="33" width="1853" height="1047" />
     </state>
     <state x="167" y="131" width="1653" height="849" key="DiffContextDialog/67.33.1853.1047@67.33.1853.1047" timestamp="1592970645761" />
-    <state x="723" y="256" width="530" height="598" key="FileChooserDialogImpl" timestamp="1592962222446">
+    <state x="723" y="256" width="530" height="598" key="FileChooserDialogImpl" timestamp="1593006265395">
       <screen x="67" y="33" width="1853" height="1047" />
     </state>
-    <state x="723" y="256" width="530" height="598" key="FileChooserDialogImpl/67.33.1853.1047@67.33.1853.1047" timestamp="1592962222446" />
-    <state x="307" y="67" width="1053" height="796" key="find.popup" timestamp="1588775142599">
-      <screen x="67" y="33" width="1533" height="867" />
+    <state x="723" y="256" width="530" height="598" key="FileChooserDialogImpl/67.33.1853.1047@67.33.1853.1047" timestamp="1593006265395" />
+    <state x="357" y="74" width="1273" height="962" key="find.popup" timestamp="1592974023887">
+      <screen x="67" y="33" width="1853" height="1047" />
     </state>
     <state x="307" y="67" width="1053" height="796" key="find.popup/67.33.1533.867@67.33.1533.867" timestamp="1588775142599" />
+    <state x="357" y="74" width="1273" height="962" key="find.popup/67.33.1853.1047@67.33.1853.1047" timestamp="1592974023887" />
   </component>
 </project>

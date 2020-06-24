@@ -12,8 +12,6 @@
           .circle-foto
             grid-row: 1
             align-content: center
-            .header__caption-container
-            .header__button
           .header__caption
             grid-row: 1
             align-content: center
@@ -25,7 +23,7 @@
       align-content: center
 
   .experience-section__main-content
-    grid-template-columns: repeat(3, 1fr)
+    grid-template-columns: repeat(4, 1fr)
     .experience-section__item
       width: 100%
       float: none
@@ -56,7 +54,7 @@
     .about-me-section
       .section__main-content
         grid-template-columns: 1fr
-        grid-rows: 2
+        grid-template-rows: 1fr 1fr
 
   @media only screen and (max-width : 1000px)
     .experience-section__main-content
@@ -77,7 +75,7 @@
       .header__container
         .header__main-content
           .container
-            grid-template-rows: 2
+            grid-template-rows: 1fr 1fr
             .header__caption
               grid-row: 2
 
@@ -95,9 +93,8 @@
           grid-row: auto
 
 // Edge 10 and upper
-@supports (-ms-ime-align:auto)
+@supports (-ms-ime-align: auto)
   .header
-    .menu-container__side-bar
     .header__container
       .header__main-content
         text-align: center
@@ -139,7 +136,6 @@
 
   @media screen and (max-width: 800px)
     .header
-      .header__line-side
       .header__container
         .header__main-content
           .container
@@ -154,7 +150,6 @@
 // IE 10-11
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active)
   .header
-    .menu-container__side-bar
     .header__container
       .header__main-content
         text-align: center
@@ -190,7 +185,6 @@
 @media screen and (max-width: 800px)
   _:-ms-fullscreen, :root
     .header
-      .header__line-side
       .header__container
         .header__main-content
           .container
@@ -215,9 +209,6 @@
 
   ::i-block-chrome, .header
     .menu-container__side-bar
-      .menu
-        .menu__item
-    .menu-container__side-bar
       height: 100%
     .header__container
       display: table
@@ -226,7 +217,6 @@
           .circle-foto
             display: table-cell
             vertical-align: middle
-            .header__caption-container
           .header__caption
             display: table-cell
             vertical-align: middle
@@ -245,7 +235,6 @@
         .header__main-content
           .container
             .circle-foto
-              height: 100%
               min-height: 0
               float: left
               display: block
@@ -263,7 +252,7 @@
       .header__line-side
         min-width: 286px
 
-@media screen and (-webkit-min-device-pixel-ratio:0) and (min-color-index:0)
+@media screen and (-webkit-min-device-pixel-ratio: 0) and (min-color-index: 0)
   ::i-block-chrome, .portfolio-section
       .section__container
         .section__main-content
