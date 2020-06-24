@@ -3,6 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="3e1bbed2-c095-424b-b8aa-f346bd1c71d8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/docs/cv/Alyona_Anikeieva_CV.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/app/docs/cv/Alyona_Anikeieva_CV.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/ua/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/ua/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gulpfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/gulpfile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,7 +29,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../webpack-project" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -138,6 +144,14 @@
       <screen x="67" y="33" width="1533" height="867" />
     </state>
     <state x="296" y="33" width="1064" height="867" key="CommitChangelistDialog2/67.33.1533.867@67.33.1533.867" timestamp="1588775344401" />
+    <state x="167" y="131" width="1653" height="849" key="DiffContextDialog" timestamp="1592970645761">
+      <screen x="67" y="33" width="1853" height="1047" />
+    </state>
+    <state x="167" y="131" width="1653" height="849" key="DiffContextDialog/67.33.1853.1047@67.33.1853.1047" timestamp="1592970645761" />
+    <state x="723" y="256" width="530" height="598" key="FileChooserDialogImpl" timestamp="1592962222446">
+      <screen x="67" y="33" width="1853" height="1047" />
+    </state>
+    <state x="723" y="256" width="530" height="598" key="FileChooserDialogImpl/67.33.1853.1047@67.33.1853.1047" timestamp="1592962222446" />
     <state x="307" y="67" width="1053" height="796" key="find.popup" timestamp="1588775142599">
       <screen x="67" y="33" width="1533" height="867" />
     </state>

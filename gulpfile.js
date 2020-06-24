@@ -33,7 +33,7 @@ gulp.task("js", function () {
     .pipe(gulp.dest("app/dist"));
 });
 
-gulp.task('watch', ['browser-sync', 'style', 'js'], function() {
+gulp.task('watch', gulp.series('browser-sync', 'style', 'js'), function() {
   gulp.watch('app/sass/**/*.sass', ['style']);
   gulp.watch('app/*.html', browser_sync.reload)
   gulp.watch('app/js/**/*.js', ['js'])
